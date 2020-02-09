@@ -17,16 +17,13 @@ namespace MControls.ViewModel
         }
 
         private MxModel mxInfo;
-        /// <summary>
-        /// 账号信息
-        /// </summary>
         public MxModel MxInfo
         {
             get { return mxInfo; }
             set { mxInfo = value; RaisePropertyChanged(() => MxInfo); }
         }
 
-        #region 全局命令
+        #region 命令
 
         private RelayCommand submitCmd;
         public RelayCommand SubmitCmd
@@ -42,17 +39,11 @@ namespace MControls.ViewModel
                 submitCmd = value;
             }
         }
-        #endregion
-
-        #region 附属方法
-        /// <summary>
-        /// 验证表单
-        /// </summary>
         private void SubmitCmdMethod()
         {
             mxInfo.Content += "Hello McControl!\r\n";         
         }
-        #endregion
 
+        #endregion
     }
 }

@@ -35,26 +35,7 @@ namespace MyDemo.ViewModel
             ///
 
             mainInfo = new MainModel();
-            //mInfo = new MxViewModel();
         }
-
-        #region SubViewModel
-
-        //private MxViewModel mInfo;
-        //public MxViewModel MInfo
-        //{
-        //    get { return mInfo; }
-        //    set { mInfo = value; RaisePropertyChanged(() => MInfo); }
-        //}
-
-        public static readonly MxViewModel MInfo = new MxViewModel()
-        {
-            MxInfo = new MControls.UIModel.MxModel()
-            { Content = "I love you" },
-            SubmitCmd = null
-        };
-
-        #endregion
 
         private MainModel mainInfo;
         public MainModel MainInfo
@@ -63,7 +44,7 @@ namespace MyDemo.ViewModel
             set { mainInfo = value; RaisePropertyChanged(() => MainInfo); }
         }
 
-        #region È«¾ÖÃüÁî
+        #region ÃüÁî
 
         private RelayCommand submitCmd;
         public RelayCommand SubmitCmd
@@ -84,6 +65,7 @@ namespace MyDemo.ViewModel
         {
             MainInfo.Content += "Hello MainControl!\r\n";
         }
+
         #endregion
 
     }

@@ -10,9 +10,6 @@ namespace MControls.UIModel
     public class MxModel : ObservableObject
     {
         private string content;
-        /// <summary>
-        /// 显示内容
-        /// </summary>
         public string Content
         {
             get { return content; }

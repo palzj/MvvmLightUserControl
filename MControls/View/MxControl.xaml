@@ -8,9 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DockPanel>
-            <!--<Button x:Name="btnTest" DockPanel.Dock="Top" Height="20" Content="用户控件按钮"  Command="{Binding SubmitCmd}" />-->
             <Button x:Name="btnTest" DockPanel.Dock="Top" Height="20" Content="用户控件按钮"  Command="{Binding Path= SubmitCmd}"/>
-
             <TextBlock x:Name="txtShow" DockPanel.Dock="Bottom" Text="{Binding Path= MxInfo.Content}">
             </TextBlock>
         </DockPanel>
