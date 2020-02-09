@@ -25,7 +25,7 @@ namespace MControls.View
         public MxControl()
         {
             InitializeComponent();
-            this.DataContext = new MxViewModel();
+            //this.DataContext = new MxViewModel();  // 由前端资源替换
         }
     }
 }
