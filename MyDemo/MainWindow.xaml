@@ -1,0 +1,26 @@
+﻿<Window x:Class="MyDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDemo"
+        xmlns:view="clr-namespace:MControls.View;assembly=MControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator},Path=Main}"
+        >
+    <Grid>
+        <DockPanel>
+            <WrapPanel DockPanel.Dock="Top">
+                <Button x:Name="btnTest" Height="20" Width="100" Content="主程序按钮"  Command="{Binding SubmitCmd }" Click="btnTest_Click">
+                </Button>
+                <TextBox x:Name="label" Height="40" Width="800" Text="{Binding Path= MainInfo.Content}">
+                </TextBox>
+            </WrapPanel>
+            <WrapPanel DockPanel.Dock="Bottom">
+                <view:MxControl x:Name="mxC">
+                </view:MxControl>
+            </WrapPanel>
+        </DockPanel>
+    </Grid>
+</Window>

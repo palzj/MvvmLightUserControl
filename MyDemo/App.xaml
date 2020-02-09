@@ -1,0 +1,20 @@
+<Application x:Class="MyDemo.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:MyDemo" 
+             StartupUri="MainWindow.xaml" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" 
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mxview="clr-namespace:MControls.View;assembly=MControls"           
+             xmlns:mxvm="clr-namespace:MControls.ViewModel;assembly=MControls"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:MyDemo.ViewModel" />
+            <DataTemplate DataType="{x:Type mxvm:MxViewModel}">
+                <mxview:MxControl />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
